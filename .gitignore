@@ -1,2 +1,4 @@
-node_modules
+ngrok
+ngrok-stable-linux-arm64.zip
+cloudflared-linux-arm64node_modules
 .env
