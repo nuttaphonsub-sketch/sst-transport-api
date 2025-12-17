@@ -8,8 +8,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
-const BOT_TOKEN = process.env.BOT_TOKEN;8582917338:AAEg8VuXivyUII6AGunVZ-yC0Iut4ZuLezg
-const CHAT_ID = process.env.CHAT_ID;8522730284
+const BOT_TOKEN = process.env.BOT_TOKEN;
+const CHAT_ID = process.env.CHAT_ID;
 
 // test หน้าเว็บ
 app.get('/', (req, res) => {
@@ -18,9 +18,6 @@ app.get('/', (req, res) => {
 
 // รับข้อมูลจากเว็บ
 app.post('/api/price', async (req, res) => {
-  console.log('📦 DATA FROM WEB =====>');
-  console.log(req.body);
-
   const { name, phone, from, to, price } = req.body;
 
   const message = `
@@ -43,7 +40,7 @@ app.post('/api/price', async (req, res) => {
       })
     });
 
-    res.json({ status: 'ok', message: 'ส่ง Telegram แล้ว' });
+    res.json({ status: 'ok' });
   } catch (err) {
     console.error(err);
     res.status(500).json({ status: 'error' });
