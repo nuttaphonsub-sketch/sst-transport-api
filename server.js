@@ -8,8 +8,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
-const BOT_TOKEN = process.env.BOT_TOKEN;
-const CHAT_ID = process.env.CHAT_ID;
+const BOT_TOKEN = process.env.BOT_TOKEN;8582917338:AAEg8VuXivyUII6AGunVZ-yC0Iut4ZuLezg
+const CHAT_ID = process.env.CHAT_ID;8522730284
 
 // test หน้าเว็บ
 app.get('/', (req, res) => {
